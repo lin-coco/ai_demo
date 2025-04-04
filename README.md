@@ -15,6 +15,8 @@ conda activate ai_demo
 pip install -r requirements.txt
 # 启动redis
 docker run -d -p 6379:6379 --name some-redis redis
+# 创建.env 配置config.py需要的参数，OPENAI的配置可以采用有免费额度的百炼接口
+vim .env
 # 启动Celery Worker
 celery -A tasks.celery worker --loglevel=info
 # 启动Flask
