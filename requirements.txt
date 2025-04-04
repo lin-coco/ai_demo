@@ -1,0 +1,5 @@
+Flask==3.1.0
+python-dotenv==1.1.0
+langchain==0.3.22
+langchain-openai==0.3.12
+celery[redis]==5.5
