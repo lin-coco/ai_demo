@@ -67,6 +67,7 @@ def translate_task(self, text: str, target_lang: str) -> dict:
             ))
         )
     )
+    # full_chain.get_graph().print_ascii()
     result = full_chain.invoke({"text": text,"target_lang": target_lang})
     print(f"任务:'{self.request.id}'运行结束: {result}")
     return result
@@ -98,6 +99,7 @@ def summarize_task(self, text: str):
         }}"""
     )
     chain = summary_prompt | llm | StrOutputParser() | RunnableLambda(json.loads)
+    # chain.get_graph().print_ascii()
     result = chain.invoke({"text": text})
     print(f"任务:'{self.request.id}'运行结束: {result}")
     return result
