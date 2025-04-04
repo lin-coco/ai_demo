@@ -48,6 +48,8 @@ conda remove -n ai_demo --all
 
 ### 演示翻译功能
 
+自动判断text文本语言，将这段文本翻译成target_lang目标语言。实现中采用了路由组合的Chain
+
 <img src="./image/translate_req.png" style="zoom:30%;" />
 
 
@@ -61,6 +63,8 @@ conda remove -n ai_demo --all
 
 
 ### 演示总结功能
+
+多维度总结text文本。实现上比翻译功能简单一点，直接构建json输出。
 
 <img src="./image/summary_req.png" style="zoom:30%;" />
 
